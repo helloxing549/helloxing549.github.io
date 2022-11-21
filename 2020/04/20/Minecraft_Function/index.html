@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Minecraft,命令方块,Function," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="关于function说明：Minecraft(基岩版)要用行为包来实现function。所以你首先要制作一个行为包，首先你要知道文件扩展名是什么，并且让它显示出来。剩下的只需照着做。 制作一个行为包1.首先你要去下载官方的行为包. 2.将里面的manifest.json和pack_icon.png解压到一个空的文件夹中。（后文的空的文件夹都指的是这个文件夹） 3.去http:&#x2F;&#x2F;www.uuid.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Minecraft(基岩版)使用Function教程">
+<meta property="og:url" content="http://yoursite.com/2020/04/20/Minecraft_Function/index.html">
+<meta property="og:site_name" content="Table: Everything">
+<meta property="og:description" content="关于function说明：Minecraft(基岩版)要用行为包来实现function。所以你首先要制作一个行为包，首先你要知道文件扩展名是什么，并且让它显示出来。剩下的只需照着做。 制作一个行为包1.首先你要去下载官方的行为包. 2.将里面的manifest.json和pack_icon.png解压到一个空的文件夹中。（后文的空的文件夹都指的是这个文件夹） 3.去http:&#x2F;&#x2F;www.uuid.">
+<meta property="og:image" content="http://yoursite.com/2020/04/20/Minecraft_Function/name.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/20/Minecraft_Function/list-1.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/20/Minecraft_Function/list-2.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/20/Minecraft_Function/list-3.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/20/Minecraft_Function/function.bianji.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/20/Minecraft_Function/success.png">
+<meta property="article:published_time" content="2020-04-20T04:51:21.000Z">
+<meta property="article:modified_time" content="2021-06-04T06:13:31.086Z">
+<meta property="article:author" content="helloxing">
+<meta property="article:tag" content="Minecraft">
+<meta property="article:tag" content="命令方块">
+<meta property="article:tag" content="Function">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/20/Minecraft_Function/name.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":8,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/04/20/Minecraft_Function/"/>
+
+
+
+
+
+  <title>Minecraft(基岩版)使用Function教程 | Table: Everything</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Table: Everything</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-@mthdm">
+          <a href="https://mthdm.cc/" target="_blank" rel="section noopener">
+            
+              <i class="menu-item-icon fa fa-fw fa-rss"></i> <br />
+            
+            @mthdm
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/20/Minecraft_Function/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="helloxing">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Table: Everything">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Minecraft(基岩版)使用Function教程</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-20T12:51:21+08:00">
+                2020-04-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E7%A8%8B%E7%B1%BB/" itemprop="url" rel="index">
+                    <span itemprop="name">教程类</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="关于function"><a href="#关于function" class="headerlink" title="关于function"></a>关于function</h1><p>说明：Minecraft(基岩版)要用行为包来实现function。所以你首先要制作一个行为包，首先你要知道文件扩展名是什么，并且让它显示出来。剩下的只需照着做。</p>
+<h1 id="制作一个行为包"><a href="#制作一个行为包" class="headerlink" title="制作一个行为包"></a>制作一个行为包</h1><p>1.首先你要去<a href="https://meedownloads.blob.core.windows.net/worlds/Vanilla_Behavior_Pack_1.14.30.zip" target="_blank" rel="noopener">下载</a>官方的行为包.</p>
+<p>2.将里面的manifest.json和pack_icon.png解压到一个<font color="Blue">空的文件夹</font>中。（后文的<font color="Blue">空的文件夹</font>都指的是这个文件夹）</p>
+<p>3.去<code>http://www.uuid.online/</code>生成一个uuid（觉得不好看可以点击Refresh），然后用文本编辑器（例如记事本）打开<font color="Blue">空的文件夹</font>里面的<code>manifest.json</code>，将<code>&quot;uuid&quot;:</code>后面的用<code>&quot;</code>圈起来的字符改成你在刚才那个网站生成的uuid，然后保存。（一共需要改三个，且每个uuid都不能相同）<br>然后将”name”后面的<code>Vanilla Behavior Pack</code>改成一个你喜欢的名称（这个是这个行为包的名称），将”description”后面的<code>Example vanilla behavior pack</code>改成一个你喜欢的描述（这个是这个行为包的描述，可以用<code>\n</code>来实现回车的功能，例如我这个粉色的By:helloxing）<br><img src="/2020/04/20/Minecraft_Function/name.png"></p>
+<p>4.在这个<font color="Blue">空的文件夹</font>里面创建一个名为<code>functions</code>的文件夹。<br><img src="/2020/04/20/Minecraft_Function/list-1.png"></p>
+<p>5.在functions文件夹里面创建一个文本文档。将其命名为<code>test.mcfunction</code>.<br>改名的过程中会提示是否改变文件扩展名，点击是。如果没有提示的话可以百度<code>显示扩展名</code>。<br><img src="/2020/04/20/Minecraft_Function/list-2.png"><br><img src="/2020/04/20/Minecraft_Function/list-3.png"></p>
+<p>6.用文本编辑器（例如记事本）打开这个文件，将<code>say §c这是一个function功能</code>写进去后，点击保存。<br><img src="/2020/04/20/Minecraft_Function/function.bianji.png"></p>
+<p><font color="red">现在你就亲手制作了一个可以用的行为包了，是不是很简单。</font></p>
+<p>7.将你的<font color="Blue">空的文件夹</font>放到游戏目录的<code>development_behavior_packs</code>文件夹里面（如果你要发布这个存档给他人使用的话请将<font color="Blue">空的文件夹</font>放到<code>behavior_packs</code>文件夹中），之后打开游戏，随便选一个存档点一下右面的笔，在左边点击行为包之后在右边点击我的包。然后你就会看到刚刚你命名过的一个行为包，把他装上去就可以了。（如果关闭这个行为包的话不会对你的存档造成影响，最多就是/function用不了）</p>
+<p>8.装好之后进入这个存档，在聊天栏输入<code>/function test</code>发送出去后你会发现你自己说了句红色的这是一个function功能并且多了一个成功执行1个功能项。<br><img src="/2020/04/20/Minecraft_Function/success.png"></p>
+<p>到了这里你就成功的弄好了，现在讲一下其他的</p>
+<h1 id="一些关于自定义的东西"><a href="#一些关于自定义的东西" class="headerlink" title="一些关于自定义的东西"></a>一些关于自定义的东西</h1><p>1.<font color="Blue">空的文件夹</font>里面的pack_icon.png是这个行为包的封面，可以自定义（最好用正方形的图片，不建议将图片弄太大）<br>2.如果你想要这个材质包不报错（这个错误不会影响你玩游戏）的话可以将manifest.json的第三个去掉。（如果你看不懂的话就不要动了）</p>
+<p>3.如果你将<font color="Blue">空的文件夹</font>放到<code>behavior_packs</code>文件夹中了，想要修改里面的文件请到相应的地图文件夹里面的behavior_packs文件夹下进行修改。<br>4.function文件中并不能像命令方块一样可以选择有无条件和延迟他只会从第一行执行到最后一行。如果命令语法出现错误则会忽略那一行，和没有与选择器相对应的目标不一样。<br>5.要注意使用/function中不需要写出扩展名。<br>6.刚才的/function test指的是运行test.mcfunction这个文件里面的命令，可以执行多行命令，要做到一行只写一个命令就好。<br>7.你可以创建很多个mcfunction文件，在游戏中只需要更改/function 后面名称就可以执行相对应的mcfunction文件<br>8.你也可以在functions中创建新的文件夹来进行分类，但在游戏中使用的时候要注意。例如你在functions中创建了个名为abcd文件夹，里面有一个名为install.mcfunction文件，要执行这个文件的时候在游戏中需要用/function abcd/install<br>9.如果在游戏打开的时候更改一个mcfunction文件的内容，在更改完毕后需要在游戏中使用/reload才能生效。若要添加新的mcfunction文件必须重启游戏才能生效。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Minecraft/" rel="tag"># Minecraft</a>
+          
+            <a href="/tags/%E5%91%BD%E4%BB%A4%E6%96%B9%E5%9D%97/" rel="tag"># 命令方块</a>
+          
+            <a href="/tags/Function/" rel="tag"># Function</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/04/17/Helloworld/" rel="next" title="Helloworld">
+                <i class="fa fa-chevron-left"></i> Helloworld
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/04/20/Novel_%E4%B8%8D%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C/" rel="prev" title="不平凡的世界">
+                不平凡的世界 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">helloxing</p>
+              <p class="site-description motion-element" itemprop="description">To be a "Cirno" and study forever!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7Carchive">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于function"><span class="nav-number">1.</span> <span class="nav-text">关于function</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#制作一个行为包"><span class="nav-number">2.</span> <span class="nav-text">制作一个行为包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些关于自定义的东西"><span class="nav-number">3.</span> <span class="nav-text">一些关于自定义的东西</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">helloxing</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

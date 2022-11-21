@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Minecraft,命令方块,Function," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前言起始很早我就有这个想法了，只是鸽了很长时间。到做出来后，就想着去做教程。因为当时还没有很多向我这个样子的玩家互传 现在教程做出来了，不过我估计大部分人还是看不懂吧(我对我自己很不自信啊)希望能帮到你。 (我是用的计分板名称蛤标签名称可能会令部分人混淆或看不懂，还请见谅)*并非最终优化版本*这是我根据之前的重写的版本**可能存在BUG PID.mcfunction1234567891011121">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Minecraft-TPA">
+<meta property="og:url" content="http://yoursite.com/2021/10/12/Minecraft-TPA/index.html">
+<meta property="og:site_name" content="Table: Everything">
+<meta property="og:description" content="前言起始很早我就有这个想法了，只是鸽了很长时间。到做出来后，就想着去做教程。因为当时还没有很多向我这个样子的玩家互传 现在教程做出来了，不过我估计大部分人还是看不懂吧(我对我自己很不自信啊)希望能帮到你。 (我是用的计分板名称蛤标签名称可能会令部分人混淆或看不懂，还请见谅)*并非最终优化版本*这是我根据之前的重写的版本**可能存在BUG PID.mcfunction1234567891011121">
+<meta property="article:published_time" content="2021-10-11T16:19:28.000Z">
+<meta property="article:modified_time" content="2022-03-29T13:11:44.200Z">
+<meta property="article:author" content="helloxing">
+<meta property="article:tag" content="Minecraft">
+<meta property="article:tag" content="命令方块">
+<meta property="article:tag" content="Function">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":8,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2021/10/12/Minecraft-TPA/"/>
+
+
+
+
+
+  <title>Minecraft-TPA | Table: Everything</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Table: Everything</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-@mthdm">
+          <a href="https://mthdm.cc/" target="_blank" rel="section noopener">
+            
+              <i class="menu-item-icon fa fa-fw fa-rss"></i> <br />
+            
+            @mthdm
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/10/12/Minecraft-TPA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="helloxing">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Table: Everything">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Minecraft-TPA</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-10-12T00:19:28+08:00">
+                2021-10-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E7%A8%8B%E7%B1%BB/" itemprop="url" rel="index">
+                    <span itemprop="name">教程类</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>起始很早我就有这个想法了，只是鸽了很长时间。<br>到做出来后，就想着去做教程。<br>因为当时还没有很多向我这个样子的玩家互传</p>
+<p>现在教程做出来了，不过我估计大部分人还是看不懂吧(我对我自己很不自信啊)<br>希望能帮到你。</p>
+<p>(我是用的计分板名称蛤标签名称可能会令部分人混淆或看不懂，还请见谅)<br>*并非最终优化版本<br>*这是我根据之前的重写的版本<br>*<br>*<font color="#BBBBBB">可能存在BUG</font></p>
+<h1 id="PID-mcfunction"><a href="#PID-mcfunction" class="headerlink" title="PID.mcfunction"></a>PID.mcfunction</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line"># 为每个在线玩家分配一个数字(1-20)，直到该玩家退出游戏</span><br><span class="line">#&gt;Need</span><br><span class="line">    scoreboard PID</span><br><span class="line">    scoreboard PID.bak</span><br><span class="line">    armor_stand PID.givePID</span><br><span class="line">    armor_stand PID.playersAmount</span><br><span class="line"></span><br><span class="line">#&gt;Main&lt;0&gt;</span><br><span class="line">    # 清空PID</span><br><span class="line">    # scoreboard players reset * PID</span><br><span class="line">    scoreboard objectives remove PID</span><br><span class="line">    scoreboard objectives add PID dummy</span><br><span class="line"></span><br><span class="line">    # 从PID.bak中恢复数据</span><br><span class="line">    execute @a ~ ~ ~ scoreboard players operation @s PID &#x3D; @s PID.bak</span><br><span class="line"></span><br><span class="line">    # 清空PID.bak</span><br><span class="line">    # scoreboard players reset * PID.bak</span><br><span class="line">    scoreboard objectives remove PID.bak</span><br><span class="line">    scoreboard objectives add PID.bak dummy</span><br><span class="line"></span><br><span class="line">    # 为新玩家分配PID</span><br><span class="line">    scoreboard players add @a PID 0</span><br><span class="line">    scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.givePID&quot;] PID 1</span><br><span class="line">    execute @a[scores&#x3D;&#123;PID&#x3D;!0&#125;] ~ ~ ~ scoreboard players add @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.givePID&quot;] PID 1</span><br><span class="line">    scoreboard players operation @p[scores&#x3D;&#123;PID&#x3D;0&#125;] PID &#x3D; @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.givePID&quot;] PID</span><br><span class="line"></span><br><span class="line">    #&gt;更新PID(主要解决玩家退出)</span><br><span class="line">        scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 0</span><br><span class="line"></span><br><span class="line">        # 1</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;1&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 1</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!1&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;1..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 2</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;2&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 2</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!2&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;2..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 3</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;3&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 3</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!3&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;3..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 4</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;4&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 4</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!4&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;4..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 5</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;5&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 5</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!5&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;5..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 6</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;6&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 6</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!6&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;6..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 7</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;7&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 7</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!7&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;7..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 8</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;8&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 8</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!8&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;8..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 9</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;9&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 9</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!9&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;9..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 10</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;10&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 10</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!10&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;10..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 11</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;11&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 11</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!11&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;11..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 12</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;12&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 12</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!12&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;12..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 13</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;13&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 13</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!13&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;13..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 14</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;14&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 14</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!14&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;14..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 15</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;15&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 15</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!15&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;15..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 16</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;16&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 16</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!16&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;16..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 17</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;17&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 17</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!17&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;17..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 18</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;18&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 18</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!18&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;18..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 19</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;19&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 19</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!19&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;19..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # 20</span><br><span class="line">        execute @a[scores&#x3D;&#123;PID&#x3D;20&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID 20</span><br><span class="line">        execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!20&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;20..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">        # %MaxPlayers</span><br><span class="line">        # execute @a[scores&#x3D;&#123;PID&#x3D;%MaxPlayers&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;] PID %MaxPlayers</span><br><span class="line">        # execute @e[type&#x3D;armor_stand,name&#x3D;&quot;PID.playersAmount&quot;,scores&#x3D;&#123;PID&#x3D;!%MaxPlayers&#125;] ~ ~ ~ scoreboard players remove @a[scores&#x3D;&#123;PID&#x3D;%MaxPlayers..&#125;] PID 1</span><br><span class="line"></span><br><span class="line">    #&gt;将数据备份到PID.bak #去掉玩家离线的分数</span><br><span class="line">        execute @a ~ ~ ~ scoreboard players operation @s PID.bak &#x3D; @s PID</span><br></pre></td></tr></table></figure>
+<h1 id="TPA-main-mcfunction"><a href="#TPA-main-mcfunction" class="headerlink" title="TPA.main.mcfunction"></a>TPA.main.mcfunction</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br></pre></td><td class="code"><pre><span class="line">#&gt;跳转至选择玩家菜单</span><br><span class="line">    execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;17000&#125;] ~ ~ ~ scoreboard players set @s SnowballMenu 122</span><br><span class="line"></span><br><span class="line">#&gt;选择功能并跳转到选择玩家列表+</span><br><span class="line">    # 传送模式 你-&gt;他(TPAPlayer &#x3D; 1)</span><br><span class="line">    execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;124000&#125;] ~ ~ ~ scoreboard players set @s TPAPlayer 1</span><br><span class="line">    execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;124000&#125;] ~ ~ ~ playsound random.orb @s ~ ~ ~ 0.7 1 1</span><br><span class="line">    execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;124000&#125;] ~ ~ ~ scoreboard players set @s SnowballMenu 101</span><br><span class="line"></span><br><span class="line">    # 传送模式 他-&gt;你(TPAPlayer &#x3D; 2)</span><br><span class="line">    execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;125000&#125;] ~ ~ ~ scoreboard players set @s TPAPlayer 2</span><br><span class="line">    execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;125000&#125;] ~ ~ ~ playsound random.orb @s ~ ~ ~ 0.7 1 1</span><br><span class="line">    execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;125000&#125;] ~ ~ ~ scoreboard players set @s SnowballMenu 101</span><br><span class="line"></span><br><span class="line">#&gt;玩家不足服务器最大人数时的玩家列表选择光标循环功能+</span><br><span class="line">    # 获取玩家人数</span><br><span class="line">    execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101..120&#125;] ~ ~ ~ scoreboard players set playersAmount TPACalculate 0</span><br><span class="line">    execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101..120&#125;] ~ ~ ~ execute @a ~ ~ ~ scoreboard players add playersAmount TPACalculate 1</span><br><span class="line">    # 调整数值(偏移+100)</span><br><span class="line">    execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101..120&#125;] ~ ~ ~ scoreboard players add playersAmount TPACalculate 100</span><br><span class="line">    # 判断当前选择的第几位玩家是否超过总人数(TPACalculate &gt;&#x3D; 1为超过)</span><br><span class="line">    execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101..120&#125;] ~ ~ ~ scoreboard players operation @s TPACalculate &#x3D; @s SnowballMenu</span><br><span class="line">    execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101..120&#125;] ~ ~ ~ scoreboard players operation @s TPACalculate -&#x3D; playersAmount TPACalculate</span><br><span class="line">    execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101..120,TPACalculate&#x3D;1..&#125;] ~ ~ ~ scoreboard players set @s SnowballMenu 101</span><br><span class="line">    execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101..120&#125;] ~ ~ ~ scoreboard players reset @s TPACalculate</span><br><span class="line"></span><br><span class="line">#&gt;发送 你-&gt;他 请求</span><br><span class="line">    #&gt;处理向自己发送请求+</span><br><span class="line">        # 判断PID是否为自己(TPACalculate为被选中玩家的临时id)</span><br><span class="line">        # 获取选择的玩家的原PID(此数值存储在@s的TPACalculate中)</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1&#125;] ~ ~ ~ scoreboard players operation @s TPACalculate &#x3D; @s SnowballMenu</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1&#125;] ~ ~ ~ scoreboard players operation @s TPACalculate &#x2F;&#x3D; &quot;#1000&quot; SnowballMenu</span><br><span class="line">        # -100</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1&#125;] ~ ~ ~ scoreboard players remove @s TPACalculate 100</span><br><span class="line"></span><br><span class="line">        # 判断是否为发送者(TPACalculate &#x3D; 0)</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1&#125;] ~ ~ ~ scoreboard players operation @s TPACalculate -&#x3D; @s PID</span><br><span class="line">        # 是的话就执行下面</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1,TPACalculate&#x3D;0&#125;] ~ ~ ~ title @s actionbar §c选择无效</span><br><span class="line"></span><br><span class="line">        # 初始化数据</span><br><span class="line">        tag @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1,TPACalculate&#x3D;0&#125;] add TPA.InitData</span><br><span class="line">        execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players set @s SnowballMenu 0</span><br><span class="line">        execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players reset @s TPACalculate</span><br><span class="line">        execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players reset @s TPAPlayer</span><br><span class="line">        tag @a[tag&#x3D;TPA.InitData] remove TPA.InitData</span><br><span class="line"></span><br><span class="line">    #&gt;处理正常请求</span><br><span class="line">        # 获取所有玩家(PID)</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1&#125;] ~ ~ ~ execute @a ~ ~ ~ scoreboard players operation @s TPACalculate &#x3D; @s PID</span><br><span class="line"></span><br><span class="line">        # 获取被选中玩家的PID(储存在@s TPACalculate)</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1&#125;] ~ ~ ~ scoreboard players operation @s TPACalculate &#x3D; @s SnowballMenu</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1&#125;] ~ ~ ~ scoreboard players operation @s TPACalculate &#x2F;&#x3D; &quot;#1000&quot; SnowballMenu</span><br><span class="line">        # -100</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1&#125;] ~ ~ ~ scoreboard players remove @s TPACalculate 100</span><br><span class="line"></span><br><span class="line">        # 选出被选择玩家(TPACalculate &#x3D; 0为被选择玩家) 有冲突所以用一个桥中转</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1&#125;] ~ ~ ~ scoreboard players operation bridge TPACalculate &#x3D; @s TPACalculate</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1&#125;] ~ ~ ~ execute @a ~ ~ ~ scoreboard players operation @s TPACalculate -&#x3D; bridge TPACalculate</span><br><span class="line"></span><br><span class="line">        # 排除自己</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1&#125;] ~ ~ ~ scoreboard players reset @s TPACalculate</span><br><span class="line"></span><br><span class="line">        # 把目标人分数设置为目标传送者(TPAPlayer &#x3D; 2)</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1&#125;] ~ ~ ~ execute @a[scores&#x3D;&#123;TPACalculate&#x3D;0&#125;] ~ ~ ~ scoreboard players set @s TPAPlayer 2</span><br><span class="line"></span><br><span class="line">        # 数据处理</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1&#125;] ~ ~ ~ scoreboard players reset @a TPACalculate</span><br><span class="line"></span><br><span class="line">        # 设置等待时间并向发起人发送成功信息</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;TPATime] TPACalculate 45</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§e您的请求已发送，若45秒内对方未处理则默认对方拒绝该请求&quot;&#125;]&#125;</span><br><span class="line">        # 向被请求者发送信息</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1&#125;] ~ ~ ~ tellraw @a[scores&#x3D;&#123;TPAPlayer&#x3D;2&#125;] &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§r&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&lt;TPA&gt;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;\n玩家 §6&quot;&#125;,&#123;&quot;selector&quot;:&quot;@s&quot;&#125;,&#123;&quot;text&quot;:&quot;§r 发起§b&#123;他-&gt;你&#125;§r的请求\n请使用§e雪球菜单-玩家互传§r功能选项\n➡§a同意请求§r&#x2F;§c拒绝请求 §r处理该请求！\n&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;&#125;]&#125;</span><br><span class="line"></span><br><span class="line">        # 固定请求者雪球菜单并清掉其他数据</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;1&#125;] ~ ~ ~ scoreboard players set @s SnowballMenu 129000</span><br><span class="line"></span><br><span class="line">#&gt;发送 他-&gt;你 请求</span><br><span class="line">    #&gt;处理向自己发送请求+</span><br><span class="line">        # 判断PID是否为自己(TPACalculate为被选中玩家的临时id)</span><br><span class="line">        # 获取选择的玩家的原PID(此数值存储在@s的TPACalculate中)</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2&#125;] ~ ~ ~ scoreboard players operation @s TPACalculate &#x3D; @s SnowballMenu</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2&#125;] ~ ~ ~ scoreboard players operation @s TPACalculate &#x2F;&#x3D; &quot;#1000&quot; SnowballMenu</span><br><span class="line">        # -100</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2&#125;] ~ ~ ~ scoreboard players remove @s TPACalculate 100</span><br><span class="line"></span><br><span class="line">        # 判断是否为发送者(TPACalculate &#x3D; 0)</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2&#125;] ~ ~ ~ scoreboard players operation @s TPACalculate -&#x3D; @s PID</span><br><span class="line">        # 是的话就执行下面</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2,TPACalculate&#x3D;0&#125;] ~ ~ ~ title @s actionbar §c选择无效</span><br><span class="line"></span><br><span class="line">        # 初始化数据</span><br><span class="line">        tag @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2,TPACalculate&#x3D;0&#125;] add TPA.InitData</span><br><span class="line">        execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players set @s SnowballMenu 0</span><br><span class="line">        execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players reset @s TPACalculate</span><br><span class="line">        execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players reset @s TPAPlayer</span><br><span class="line">        tag @a[tag&#x3D;TPA.InitData] remove TPA.InitData</span><br><span class="line"></span><br><span class="line">    #&gt;处理正常请求</span><br><span class="line">        # 获取所有玩家(PID)</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2&#125;] ~ ~ ~ execute @a ~ ~ ~ scoreboard players operation @s TPACalculate &#x3D; @s PID</span><br><span class="line">        </span><br><span class="line">        # 获取被选中玩家的PID分数(储存在@s TPACalculate)</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2&#125;] ~ ~ ~ scoreboard players operation @s TPACalculate &#x3D; @s SnowballMenu</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2&#125;] ~ ~ ~ scoreboard players operation @s TPACalculate &#x2F;&#x3D; &quot;#1000&quot; SnowballMenu</span><br><span class="line">        # -100</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2&#125;] ~ ~ ~ scoreboard players remove @s TPACalculate 100</span><br><span class="line">        </span><br><span class="line">        # 选出被选择玩家(TPACalculate &#x3D; 0为被选择玩家) 有冲突所以用一个桥中转</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2&#125;] ~ ~ ~ scoreboard players operation bridge TPACalculate &#x3D; @s TPACalculate</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2&#125;] ~ ~ ~ execute @a ~ ~ ~ scoreboard players operation @s TPACalculate -&#x3D; bridge TPACalculate</span><br><span class="line"></span><br><span class="line">        # 排除自己</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2&#125;] ~ ~ ~ scoreboard players reset @s TPACalculate</span><br><span class="line"></span><br><span class="line">        # 把目标人分数设置为目标传送者(TPAPlayer &#x3D; 1)</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2&#125;] ~ ~ ~ execute @a[scores&#x3D;&#123;TPACalculate&#x3D;0&#125;] ~ ~ ~ scoreboard players set @s TPAPlayer 1</span><br><span class="line"></span><br><span class="line">        # 清除数据</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2&#125;] ~ ~ ~ scoreboard players reset @a TPACalculate</span><br><span class="line"></span><br><span class="line">        # 设置等待时间并向发起人发送成功信息</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;TPATime] TPACalculate 45</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§e您的请求已发送，若45秒内对方未处理则默认对方拒绝该请求&quot;&#125;]&#125;</span><br><span class="line"></span><br><span class="line">        # 向被请求者发送信息</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2&#125;] ~ ~ ~ tellraw @a[scores&#x3D;&#123;TPAPlayer&#x3D;1&#125;] &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§r&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&lt;TPA&gt;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;\n玩家 §6&quot;&#125;,&#123;&quot;selector&quot;:&quot;@s&quot;&#125;,&#123;&quot;text&quot;:&quot;§r 发起§b&#123;你-&gt;他&#125;§r的请求\n请使用§e雪球菜单-玩家互传§r功能选项\n➡§a同意请求§r&#x2F;§c拒绝请求 §r处理该请求！\n&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;&#125;]&#125;</span><br><span class="line"></span><br><span class="line">        # 固定请求者雪球菜单并清掉其他数据</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101000..120000,TPAPlayer&#x3D;2&#125;] ~ ~ ~ scoreboard players set @s SnowballMenu 130000</span><br><span class="line"></span><br><span class="line">#&gt;请求者主动取消</span><br><span class="line">    #&gt;你to他</span><br><span class="line">        execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;129000&#125;,rxm&#x3D;85] ~ ~ ~ title @s actionbar §a您已取消该请求！！</span><br><span class="line">        execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;129000&#125;,rxm&#x3D;85] ~ ~ ~ playsound random.orb @s ~ ~ ~ 0.7 1 1</span><br><span class="line">        execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;129000&#125;,rxm&#x3D;85] ~ ~ ~ title @a[scores&#x3D;&#123;TPAPlayer&#x3D;2&#125;] actionbar §d对方已取消请求！！</span><br><span class="line"></span><br><span class="line">        # 停止计时</span><br><span class="line">        execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;129000&#125;,rxm&#x3D;85] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;TPATime] TPAPlayer -1</span><br><span class="line"></span><br><span class="line">        # 初始化数据</span><br><span class="line">        execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;129000&#125;,rxm&#x3D;85] ~ ~ ~ tag @s add TPA.InitData</span><br><span class="line">        execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players set @s SnowballMenu 0</span><br><span class="line">        execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players reset @a TPACalculate</span><br><span class="line">        execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players reset @a TPAPlayer</span><br><span class="line">        tag @a[tag&#x3D;TPA.InitData] remove TPA.InitData</span><br><span class="line"></span><br><span class="line">    #&gt;他to你</span><br><span class="line">        execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;130000&#125;,rxm&#x3D;85] ~ ~ ~ title @s actionbar §a您已取消该请求！！</span><br><span class="line">        execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;130000&#125;,rxm&#x3D;85] ~ ~ ~ playsound random.orb @s ~ ~ ~ 0.7 1 1</span><br><span class="line">        execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;130000&#125;,rxm&#x3D;85] ~ ~ ~ title @a[scores&#x3D;&#123;TPAPlayer&#x3D;1&#125;] actionbar §d对方已取消请求！！</span><br><span class="line"></span><br><span class="line">        # 停止计时</span><br><span class="line">        execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;130000&#125;,rxm&#x3D;85] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;TPATime] TPAPlayer -1</span><br><span class="line"></span><br><span class="line">        # 初始化数据</span><br><span class="line">        execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;130000&#125;,rxm&#x3D;85] ~ ~ ~ tag @s add TPA.InitData</span><br><span class="line">        execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players set @s SnowballMenu 0</span><br><span class="line">        execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players reset @a TPACalculate</span><br><span class="line">        execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players reset @a TPAPlayer</span><br><span class="line">        tag @a[tag&#x3D;TPA.InitData] remove TPA.InitData</span><br><span class="line"></span><br><span class="line">#&gt;有人用的时候锁定其他人用</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101..120&#125;] ~ ~ ~ execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;124..125,TPAPlayer&#x3D;!0..1&#125;] ~ ~ ~ playsound random.anvil_land @s ~ ~ ~ 1 2.6 1</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101..120&#125;] ~ ~ ~ title @a[scores&#x3D;&#123;SnowballMenu&#x3D;124..125&#125;] times 10 20 10</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101..120&#125;] ~ ~ ~ title @a[scores&#x3D;&#123;SnowballMenu&#x3D;124..125&#125;] subtitle §c当前有人正在使用玩家互传，请稍后重试</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101..120&#125;] ~ ~ ~ title @a[scores&#x3D;&#123;SnowballMenu&#x3D;124..125&#125;] title §r</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;101..120&#125;] ~ ~ ~ scoreboard players set @a[scores&#x3D;&#123;SnowballMenu&#x3D;124..125&#125;] SnowballMenu 122</span><br><span class="line"></span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;129000..130000&#125;] ~ ~ ~ execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;124..125,TPAPlayer&#x3D;!0..1&#125;] ~ ~ ~ playsound random.anvil_land @s ~ ~ ~ 1 2.6 1</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;129000..130000&#125;] ~ ~ ~ title @a[scores&#x3D;&#123;SnowballMenu&#x3D;124..125,TPAPlayer&#x3D;!1..2&#125;] times 10 20 10</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;129000..130000&#125;] ~ ~ ~ title @a[scores&#x3D;&#123;SnowballMenu&#x3D;124..125,TPAPlayer&#x3D;!1..2&#125;] subtitle §c当前有人正在使用玩家互传，请稍后重试</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;129000..130000&#125;] ~ ~ ~ title @a[scores&#x3D;&#123;SnowballMenu&#x3D;124..125,TPAPlayer&#x3D;!1..2&#125;] title §r</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;129000..130000&#125;] ~ ~ ~ scoreboard players set @a[scores&#x3D;&#123;SnowballMenu&#x3D;124..125&#125;] SnowballMenu 122</span><br><span class="line"></span><br><span class="line">#&gt;同意请求处理</span><br><span class="line">    #&gt;处理自己传送到其他人请求(自己-&gt;别人)</span><br><span class="line">        #&gt;无请求就同意的话</span><br><span class="line">            execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;122000&#125;] ~ ~ ~ scoreboard players operation @s SnowballMenu +&#x3D; @s TPAPlayer</span><br><span class="line"></span><br><span class="line">            execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;122000&#125;] ~ ~ ~ tag @s add TPA.InitData</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ title @s actionbar §d无效请求，没有人发送请求！！</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ playsound random.anvil_land @s ~ ~ ~ 0.7 2 1</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players set @s SnowballMenu 0</span><br><span class="line">            tag @a[tag&#x3D;TPA.InitData] remove TPA.InitData</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        #&gt;处理正常请求(如果为被请求者则SnowballMenu &#x3D; 122000+2)</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;122002&#125;] ~ ~ ~ tellraw @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;129000&#125;] &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§b&lt;TPA&gt; §a对方已同意该请求！&quot;&#125;]&#125;</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;122002&#125;] ~ ~ ~ tellraw @s &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§b&lt;TPA&gt; §a您已同意该请求！&quot;&#125;]&#125;</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;122002&#125;] ~ ~ ~ playsound random.orb @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;129000&#125;] ~ ~ ~</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;122002&#125;] ~ ~ ~ playsound random.orb @s ~ ~ ~</span><br><span class="line">            # 传送</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;122002&#125;] ~ ~ ~ tp @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;129000&#125;] @s</span><br><span class="line"></span><br><span class="line">            # 停止计时</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;122002&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;TPATime] TPAPlayer -1</span><br><span class="line"></span><br><span class="line">            # 恢复数据</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;122002&#125;] ~ ~ ~ tag @s add TPA.InitData</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players set @a[scores&#x3D;&#123;SnowballMenu&#x3D;122000..130000&#125;] SnowballMenu 0</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players reset @a TPACalculate</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players reset @a TPAPlayer</span><br><span class="line">            tag @a[tag&#x3D;TPA.InitData] remove TPA.InitData</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    #&gt;处理其他人传送到自己请求(别人-&gt;自己) </span><br><span class="line">        #&gt;无请求就同意的话</span><br><span class="line">            execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;122000&#125;] ~ ~ ~ scoreboard players operation @s SnowballMenu +&#x3D; @s TPAPlayer</span><br><span class="line"></span><br><span class="line">            execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;122000&#125;] ~ ~ ~ tag @s add TPA.InitData</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ title @s actionbar §d无效请求，没有人发送请求！！</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ playsound random.anvil_land @s ~ ~ ~ 0.7 2 1</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players set @s SnowballMenu 0</span><br><span class="line">            tag @a[tag&#x3D;TPA.InitData] remove TPA.InitData</span><br><span class="line"></span><br><span class="line">        #&gt;处理正常请求(如果为被请求者则SnowballMenu &#x3D; 122000+1)(SnowballMenu&#x3D;130000 -&gt; TPAPlayer&#x3D;2)</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;122001&#125;] ~ ~ ~ tellraw @a[scores&#x3D;&#123;TPAPlayer&#x3D;1&#125;] &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§b&lt;TPA&gt; §a对方已同意该请求！&quot;&#125;]&#125;</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;122001&#125;] ~ ~ ~ tellraw @s &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§b&lt;TPA&gt; §a您已同意该请求！&quot;&#125;]&#125;</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;122001&#125;] ~ ~ ~ playsound random.orb @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;130000&#125;] ~ ~ ~</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;122001&#125;] ~ ~ ~ playsound random.orb @s ~ ~ ~</span><br><span class="line">            # 传送(0-1)</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;122001&#125;] ~ ~ ~ tp @s @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;130000&#125;] </span><br><span class="line"></span><br><span class="line">            # 停止计时</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;122001&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;TPATime] TPAPlayer -1</span><br><span class="line"></span><br><span class="line">            # 恢复数据</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;122001&#125;] ~ ~ ~ tag @s add TPA.InitData</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players set @a[scores&#x3D;&#123;SnowballMenu&#x3D;122000..130000&#125;] SnowballMenu 0</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players reset @a TPACalculate</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players reset @a TPAPlayer</span><br><span class="line">            tag @a[tag&#x3D;TPA.InitData] remove TPA.InitData</span><br><span class="line"></span><br><span class="line">#&gt;拒绝请求处理I</span><br><span class="line">    #&gt;处理自己传送到其他人请求(自己-&gt;别人)</span><br><span class="line">        #&gt;无请求就拒绝的话</span><br><span class="line">            execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;123000&#125;] ~ ~ ~ scoreboard players operation @s SnowballMenu +&#x3D; @s TPAPlayer</span><br><span class="line"></span><br><span class="line">            execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;123000&#125;] ~ ~ ~ tag @s add TPA.InitData</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ title @s actionbar §d无效请求，没有人发送请求！！</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ playsound random.anvil_land @s ~ ~ ~ 0.7 2 1</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players set @s SnowballMenu 0</span><br><span class="line">            tag @a[tag&#x3D;TPA.InitData] remove TPA.InitData</span><br><span class="line"></span><br><span class="line">        #&gt;处理正常请求(如果为被请求者则SnowballMenu &#x3D; 122000+2)</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;123002&#125;] ~ ~ ~ tellraw @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;129000&#125;] &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§b&lt;TPA&gt; §d对方已拒绝该请求！&quot;&#125;]&#125;</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;123002&#125;] ~ ~ ~ tellraw @s &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§b&lt;TPA&gt; §a您已拒绝该请求！&quot;&#125;]&#125;</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;123002&#125;] ~ ~ ~ playsound random.anvil_land @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;129000&#125;] ~ ~ ~</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;123002&#125;] ~ ~ ~ playsound random.orb @s ~ ~ ~</span><br><span class="line"></span><br><span class="line">            # 停止计时</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;123002&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;TPATime] TPAPlayer -1</span><br><span class="line"></span><br><span class="line">            # 恢复数据</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;123002&#125;] ~ ~ ~ tag @s add TPA.InitData</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players set @a[scores&#x3D;&#123;SnowballMenu&#x3D;122000..130000&#125;] SnowballMenu 0</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players reset @a TPACalculate</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players reset @a TPAPlayer</span><br><span class="line">            tag @a[tag&#x3D;TPA.InitData] remove TPA.InitData</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    #&gt;处理其他人传送到自己请求(别人-&gt;自己)</span><br><span class="line">        #&gt;无请求就拒绝的话</span><br><span class="line">            execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;123000&#125;] ~ ~ ~ scoreboard players operation @s SnowballMenu +&#x3D; @s TPAPlayer</span><br><span class="line">            execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;123000&#125;] ~ ~ ~ tag @s add TPA.InitData</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ title @s actionbar §d无效请求，没有人发送请求！！</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ playsound random.anvil_land @s ~ ~ ~ 0.7 2 1</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players set @s SnowballMenu 0</span><br><span class="line">            tag @a[tag&#x3D;TPA.InitData] remove TPA.InitData</span><br><span class="line"></span><br><span class="line">        #&gt;处理正常请求(如果为被请求者则SnowballMenu &#x3D; 122000+1)</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;123001&#125;] ~ ~ ~ tellraw @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;130000&#125;] &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§b&lt;TPA&gt; §d对方已拒绝该请求！&quot;&#125;]&#125;</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;123001&#125;] ~ ~ ~ tellraw @s &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§b&lt;TPA&gt; §a您已拒绝该请求！&quot;&#125;]&#125;</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;123001&#125;] ~ ~ ~ playsound random.anvil_land @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;130000&#125;] ~ ~ ~</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;123001&#125;] ~ ~ ~ playsound random.orb @s ~ ~ ~</span><br><span class="line"></span><br><span class="line">            # 停止计时</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;123001&#125;] ~ ~ ~ scoreboard players set @e[type&#x3D;armor_stand,name&#x3D;TPATime] TPAPlayer -1</span><br><span class="line"></span><br><span class="line">            # 恢复数据</span><br><span class="line">            execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;123001&#125;] ~ ~ ~ tag @s add TPA.InitData</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players set @a[scores&#x3D;&#123;SnowballMenu&#x3D;122000..130000&#125;] SnowballMenu 0</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players reset @a TPACalculate</span><br><span class="line">            execute @a[tag&#x3D;TPA.InitData] ~ ~ ~ scoreboard players reset @a TPAPlayer</span><br><span class="line">            tag @a[tag&#x3D;TPA.InitData] remove TPA.InitData</span><br></pre></td></tr></table></figure>
+<h1 id="TPA-timer-20-mcfunction"><a href="#TPA-timer-20-mcfunction" class="headerlink" title="TPA.timer(20).mcfunction"></a>TPA.timer(20).mcfunction</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#&gt;计时和超时处理&lt;20&gt;</span><br><span class="line">    # 计时</span><br><span class="line">    execute @e[type&#x3D;armor_stand,name&#x3D;TPATime,scores&#x3D;&#123;TPACalculate&#x3D;0..&#125;] ~ ~ ~ scoreboard players remove @s TPACalculate 1</span><br><span class="line"></span><br><span class="line">    # 超时处理</span><br><span class="line">    execute @e[type&#x3D;armor_stand,name&#x3D;TPATime,scores&#x3D;&#123;TPACalculate&#x3D;0&#125;] ~ ~ ~ tellraw @a[scores&#x3D;&#123;TPAPlayer&#x3D;1..2&#125;] &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§b&lt;TPA&gt; §e请求超时，已自动处理！！&quot;&#125;]&#125;</span><br><span class="line">    execute @e[type&#x3D;armor_stand,name&#x3D;TPATime,scores&#x3D;&#123;TPACalculate&#x3D;0&#125;] ~ ~ ~ execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1..2&#125;] ~ ~ ~ playsound random.anvil_land @s ~ ~ ~ 0.7 2.6 1</span><br><span class="line"></span><br><span class="line">    # 恢复数据</span><br><span class="line">    execute @e[type&#x3D;armor_stand,name&#x3D;TPATime,scores&#x3D;&#123;TPACalculate&#x3D;0&#125;] ~ ~ ~ scoreboard players set @a[scores&#x3D;&#123;SnowballMenu&#x3D;129000..130000&#125;] SnowballMenu 0</span><br><span class="line">    execute @e[type&#x3D;armor_stand,name&#x3D;TPATime,scores&#x3D;&#123;TPACalculate&#x3D;0&#125;] ~ ~ ~ scoreboard players reset @a TPAPlayer</span><br><span class="line">    </span><br><span class="line">    # 反馈剩余时间信息</span><br><span class="line">    # 你-&gt;他</span><br><span class="line">    execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;129000&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§a请等待对方处理，低头可以取消，剩余时间: §e&quot;&#125;,&#123;&quot;score&quot;:&#123;&quot;name&quot;:&quot;@e[type&#x3D;armor_stand,name&#x3D;TPATime]&quot;,&quot;objective&quot;:&quot;TPACalculate&quot;&#125;&#125;]&#125;</span><br><span class="line">    execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;129000&#125;] ~ ~ ~ titleraw @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;0..10&#125;] actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§a请处理传送请求，剩余时间: §e&quot;&#125;,&#123;&quot;score&quot;:&#123;&quot;name&quot;:&quot;@e[type&#x3D;armor_stand,name&#x3D;TPATime]&quot;,&quot;objective&quot;:&quot;TPACalculate&quot;&#125;&#125;]&#125;</span><br><span class="line">    # 他-&gt;你</span><br><span class="line">    execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;130000&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§a请等待对方处理，低头可以取消，剩余时间: §e&quot;&#125;,&#123;&quot;score&quot;:&#123;&quot;name&quot;:&quot;@e[type&#x3D;armor_stand,name&#x3D;TPATime]&quot;,&quot;objective&quot;:&quot;TPACalculate&quot;&#125;&#125;]&#125;</span><br><span class="line">    execute @a[scores&#x3D;&#123;TPAPlayer&#x3D;2,SnowballMenu&#x3D;130000&#125;] ~ ~ ~ titleraw @a[scores&#x3D;&#123;TPAPlayer&#x3D;1,SnowballMenu&#x3D;0..10&#125;] actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§a请处理传送请求，剩余时间: §e&quot;&#125;,&#123;&quot;score&quot;:&#123;&quot;name&quot;:&quot;@e[type&#x3D;armor_stand,name&#x3D;TPATime]&quot;,&quot;objective&quot;:&quot;TPACalculate&quot;&#125;&#125;]&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="SnowballMenu3-0-5-mcfunction"><a href="#SnowballMenu3-0-5-mcfunction" class="headerlink" title="SnowballMenu3.0(5).mcfunction"></a>SnowballMenu3.0(5).mcfunction</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"># 新版雪球菜单</span><br><span class="line"># 功能：返回主城 一键重生 每日签到 玩家举报 回溯传送 查看活动 玩家互传 成就系统</span><br><span class="line"># 功能：创建摊位 购买物品 回收摊位 调整价格 返回主城</span><br><span class="line"># </span><br><span class="line">#&gt;Need</span><br><span class="line">    scoreboard SnowballMenu</span><br><span class="line">    score &quot;#1000&quot; :1000</span><br><span class="line"></span><br><span class="line">    scoreboard TPAPlayer</span><br><span class="line">    scoreboard TPACalculate</span><br><span class="line">    score &quot;%from&quot; :1 &quot;%to&quot; :2</span><br><span class="line"></span><br><span class="line">    armor_stand TPATime</span><br><span class="line"></span><br><span class="line"># #&gt;雪球处理部分 #&gt;为了玩家抛出雪球后就能即使得到反馈，所以这个要单独拎出来放在0延迟的rcb中</span><br><span class="line">#     #&gt;判断场地，普通场地为10，自贸区为20，tpa为101-125</span><br><span class="line">#         execute @e[type&#x3D;snowball] ~ ~ ~ scoreboard players add @a[scores&#x3D;&#123;SnowballMenu&#x3D;0&#125;] SnowballMenu 10</span><br><span class="line"></span><br><span class="line">#         # 在自贸区时执行</span><br><span class="line">#         execute @e[type&#x3D;snowball] ~ ~ ~ scoreboard players add @a[x&#x3D;-92,y&#x3D;71,z&#x3D;-315,dx&#x3D;110,dy&#x3D;9,dz&#x3D;21,scores&#x3D;&#123;SnowballMenu&#x3D;10&#125;] SnowballMenu 10 </span><br><span class="line"></span><br><span class="line">#         #正常给分数</span><br><span class="line">#         execute @e[type&#x3D;snowball] ~ ~ ~ scoreboard players add @p[scores&#x3D;&#123;SnowballMenu&#x3D;0..999&#125;,r&#x3D;2] SnowballMenu 1</span><br><span class="line">#         execute @e[type&#x3D;snowball] ~ ~ ~ give @p[r&#x3D;2,m&#x3D;!1] snowball 1</span><br><span class="line">#         execute @e[type&#x3D;snowball] ~ ~ ~ kill @s</span><br><span class="line"></span><br><span class="line">    #&gt;选择处理 抬头rx&#x3D;-85 低头rxm&#x3D;85&lt;5&gt;</span><br><span class="line">        # 抬头(确定)</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;11..999&#125;,rx&#x3D;-85] ~ ~ ~ playsound random.orb @s ~ ~ ~ 0.7 1 1</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;11..999&#125;,rx&#x3D;-85] ~ ~ ~ scoreboard players operation @s SnowballMenu *&#x3D; &quot;#1000&quot; SnowballMenu</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;11000..999000&#125;,rx&#x3D;-85] ~ ~ ~ tp @s ~ ~ ~ ~ 0</span><br><span class="line"></span><br><span class="line">        # 低头(取消)</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;11..999&#125;,rxm&#x3D;85] ~ ~ ~ playsound random.anvil_land @s ~ ~ ~ 0.7 2 1</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;11..999&#125;,rxm&#x3D;85] ~ ~ ~ title @s actionbar §d已取消</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;11..999&#125;,rxm&#x3D;85] ~ ~ ~ scoreboard players set @s SnowballMenu 0</span><br><span class="line"></span><br><span class="line">#&gt;显示部分&lt;5&gt;</span><br><span class="line">    #&gt;一级菜单显示</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;11&#125;] ~ ~ ~ titleraw @s actionbar &#123; &quot;rawtext&quot;: [ &#123; &quot;text&quot;: &quot; §e※雪球菜单※\n§c▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n§b§l 『返回主城』\n§r §6●§r 一键重生\n§r §6●§r 每日签到\n§r §6●§r 玩家举报\n§r §6●§r 回溯传送\n§r §6●§r 查看活动\n§r §6●§r 玩家互传\n§r §6●§r 成就系统§r\n§c▲&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▲\n§r抬头§a✔§r低头§c✘§r\n\n\n\n&quot; &#125; ] &#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;12&#125;] ~ ~ ~ titleraw @s actionbar &#123; &quot;rawtext&quot;: [ &#123; &quot;text&quot;: &quot; §e※雪球菜单※\n§c▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n§r §6●§r 返回主城\n§b§l 『一键重生』\n§r §6●§r 每日签到\n§r §6●§r 玩家举报\n§r §6●§r 回溯传送\n§r §6●§r 查看活动\n§r §6●§r 玩家互传\n§r §6●§r 成就系统§r\n§c▲&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▲\n§r抬头§a✔§r低头§c✘§r\n\n\n\n&quot; &#125; ] &#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;13&#125;] ~ ~ ~ titleraw @s actionbar &#123; &quot;rawtext&quot;: [ &#123; &quot;text&quot;: &quot; §e※雪球菜单※\n§c▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n§r §6●§r 返回主城\n§r §6●§r 一键重生\n§b§l 『每日签到』\n§r §6●§r 玩家举报\n§r §6●§r 回溯传送\n§r §6●§r 查看活动\n§r §6●§r 玩家互传\n§r §6●§r 成就系统§r\n§c▲&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▲\n§r抬头§a✔§r低头§c✘§r\n\n\n\n&quot; &#125; ] &#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;14&#125;] ~ ~ ~ titleraw @s actionbar &#123; &quot;rawtext&quot;: [ &#123; &quot;text&quot;: &quot; §e※雪球菜单※\n§c▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n§r §6●§r 返回主城\n§r §6●§r 一键重生\n§r §6●§r 每日签到\n§b§l 『玩家举报』\n§r §6●§r 回溯传送\n§r §6●§r 查看活动\n§r §6●§r 玩家互传\n§r §6●§r 成就系统§r\n§c▲&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▲\n§r抬头§a✔§r低头§c✘§r\n\n\n\n&quot; &#125; ] &#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;15&#125;] ~ ~ ~ titleraw @s actionbar &#123; &quot;rawtext&quot;: [ &#123; &quot;text&quot;: &quot; §e※雪球菜单※\n§c▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n§r §6●§r 返回主城\n§r §6●§r 一键重生\n§r §6●§r 每日签到\n§r §6●§r 玩家举报\n§b§l 『回溯传送』\n§r §6●§r 查看活动\n§r §6●§r 玩家互传\n§r §6●§r 成就系统§r\n§c▲&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▲\n§r抬头§a✔§r低头§c✘§r\n\n\n\n&quot; &#125; ] &#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;16&#125;] ~ ~ ~ titleraw @s actionbar &#123; &quot;rawtext&quot;: [ &#123; &quot;text&quot;: &quot; §e※雪球菜单※\n§c▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n§r §6●§r 返回主城\n§r §6●§r 一键重生\n§r §6●§r 每日签到\n§r §6●§r 玩家举报\n§r §6●§r 回溯传送\n§b§l 『查看活动』\n§r §6●§r 玩家互传\n§r §6●§r 成就系统§r\n§c▲&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▲\n§r抬头§a✔§r低头§c✘§r\n\n\n\n&quot; &#125; ] &#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;17&#125;] ~ ~ ~ titleraw @s actionbar &#123; &quot;rawtext&quot;: [ &#123; &quot;text&quot;: &quot; §e※雪球菜单※\n§c▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n§r §6●§r 返回主城\n§r §6●§r 一键重生\n§r §6●§r 每日签到\n§r §6●§r 玩家举报\n§r §6●§r 回溯传送\n§r §6●§r 查看活动\n§b§l 『玩家互传』\n§r §6●§r 成就系统§r\n§c▲&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▲\n§r抬头§a✔§r低头§c✘§r\n\n\n\n&quot; &#125; ] &#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;18&#125;] ~ ~ ~ titleraw @s actionbar &#123; &quot;rawtext&quot;: [ &#123; &quot;text&quot;: &quot; §e※雪球菜单※\n§c▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n§r §6●§r 返回主城\n§r §6●§r 一键重生\n§r §6●§r 每日签到\n§r §6●§r 玩家举报\n§r §6●§r 回溯传送\n§r §6●§r 查看活动\n§r §6●§r 玩家互传\n§b§l 『成就系统』§r\n§c▲&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▲\n§r抬头§a✔§r低头§c✘§r\n\n\n\n&quot; &#125; ] &#125;</span><br><span class="line">        # execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;19&#125;] ~ ~ ~ scoreboard players set @s SnowballMenu 11</span><br><span class="line">    #&gt;自贸区显示</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;21&#125;] ~ ~ ~ titleraw @s actionbar &#123; &quot;rawtext&quot;: [ &#123; &quot;text&quot;: &quot; §e※自贸区菜单※\n§c▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n§b§l 『创建摊位』\n§r §6●§r 购买物品\n§r §6●§r 回收摊位\n§r §6●§r 调整价格\n§r §6●§r 返回主城§r\n§c▲&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▲\n§r抬头§a✔§r低头§c✘§r\n&quot; &#125; ] &#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;22&#125;] ~ ~ ~ titleraw @s actionbar &#123; &quot;rawtext&quot;: [ &#123; &quot;text&quot;: &quot; §e※自贸区菜单※\n§c▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n§r §6●§r 创建摊位\n§b§l 『购买物品』\n§r §6●§r 回收摊位\n§r §6●§r 调整价格\n§r §6●§r 返回主城§r\n§c▲&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▲\n§r抬头§a✔§r低头§c✘§r\n&quot; &#125; ] &#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;23&#125;] ~ ~ ~ titleraw @s actionbar &#123; &quot;rawtext&quot;: [ &#123; &quot;text&quot;: &quot; §e※自贸区菜单※\n§c▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n§r §6●§r 创建摊位\n§r §6●§r 购买物品\n§b§l 『回收摊位』\n§r §6●§r 调整价格\n§r §6●§r 返回主城§r\n§c▲&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▲\n§r抬头§a✔§r低头§c✘§r\n&quot; &#125; ] &#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;24&#125;] ~ ~ ~ titleraw @s actionbar &#123; &quot;rawtext&quot;: [ &#123; &quot;text&quot;: &quot; §e※自贸区菜单※\n§c▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n§r §6●§r 创建摊位\n§r §6●§r 购买物品\n§r §6●§r 回收摊位\n§b§l 『调整价格』\n§r §6●§r 返回主城§r\n§c▲&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▲\n§r抬头§a✔§r低头§c✘§r\n&quot; &#125; ] &#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;25&#125;] ~ ~ ~ titleraw @s actionbar &#123; &quot;rawtext&quot;: [ &#123; &quot;text&quot;: &quot; §e※自贸区菜单※\n§c▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n§r §6●§r 创建摊位\n§r §6●§r 购买物品\n§r §6●§r 回收摊位\n§r §6●§r 调整价格\n§b§l 『返回主城』§r\n§c▲&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▲\n§r抬头§a✔§r低头§c✘§r\n&quot; &#125; ] &#125;</span><br><span class="line">        # execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;26&#125;] ~ ~ ~ scoreboard players set @s SnowballMenu 21</span><br><span class="line">        # 29</span><br><span class="line">    #&gt;互传玩家列表和选择功能列表显示</span><br><span class="line">        # 1-10</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;101&#125;] ~ ~ ~ titleraw @a actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;1&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;2&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;3&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;4&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;5&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;6&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;7&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;8&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;9&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;10&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;102&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;1&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;2&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;3&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;4&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;5&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;6&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;7&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;8&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;9&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;10&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;103&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;1&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;2&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;3&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;4&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;5&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;6&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;7&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;8&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;9&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;10&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;104&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;1&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;2&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;3&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;4&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;5&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;6&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;7&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;8&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;9&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;10&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;105&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;1&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;2&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;3&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;4&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;5&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;6&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;7&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;8&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;9&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;10&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;106&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;1&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;2&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;3&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;4&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;5&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;6&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;7&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;8&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;9&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;10&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;107&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;1&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;2&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;3&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;4&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;5&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;6&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;7&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;8&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;9&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;10&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;108&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;1&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;2&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;3&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;4&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;5&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;6&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;7&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;8&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;9&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;10&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;109&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;1&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;2&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;3&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;4&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;5&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;6&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;7&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;8&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;9&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;10&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;110&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;1&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;2&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;3&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;4&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;5&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;6&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;7&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;8&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;9&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;10&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        # 11-20</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;111&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;11&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;12&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;13&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;14&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;15&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;16&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;17&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;18&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;19&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;20&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;112&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;11&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;12&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;13&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;14&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;15&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;16&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;17&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;18&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;19&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;20&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;113&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;11&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;12&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;13&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;14&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;15&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;16&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;17&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;18&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;19&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;20&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;114&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;11&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;12&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;13&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;14&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;15&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;16&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;17&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;18&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;19&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;20&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;115&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;11&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;12&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;13&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;14&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;15&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;16&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;17&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;18&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;19&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;20&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;116&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;11&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;12&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;13&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;14&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;15&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;16&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;17&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;18&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;19&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;20&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;117&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;11&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;12&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;13&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;14&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;15&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;16&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;17&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;18&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;19&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;20&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;118&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;11&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;12&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;13&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;14&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;15&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;16&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;17&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;18&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;19&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;20&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;119&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;11&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;12&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;13&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;14&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;15&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;16&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;17&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;18&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;19&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;20&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnobwallMenu&#x3D;120&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot; §e※TPA玩家选择※\n§c ▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;11&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;12&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;13&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;14&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;15&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;16&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;17&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;18&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§r   &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;19&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n&quot;&#125;,&#123;&quot;text&quot;:&quot;§a §l-§r§a &quot;&#125;,&#123;&quot;selector&quot;:&quot;@a[scores&#x3D;&#123;PID&#x3D;20&#125;]&quot;&#125;,&#123;&quot;text&quot;:&quot;§r\n\n\n\n\n&quot;&#125;]&#125;</span><br><span class="line"></span><br><span class="line">        # 功能菜单</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;122&#125;] ~ ~ ~ titleraw @a actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§e※TPA功能菜单※\n§c▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼§r\n  §a同意请求§r\n  §r拒绝请求§r\n   §r你-&gt;他§r\n   §r他-&gt;你§r\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;123&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§e※TPA功能菜单※\n§c▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼§r\n  §r同意请求§r\n  §a拒绝请求§r\n   §r你-&gt;他§r\n   §r他-&gt;你§r\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;124&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§e※TPA功能菜单※\n§c▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼§r\n  §r同意请求§r\n  §r拒绝请求§r\n   §a你-&gt;他§r\n   §r他-&gt;你§r\n&quot;&#125;]&#125;</span><br><span class="line">        execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;125&#125;] ~ ~ ~ titleraw @s actionbar &#123;&quot;rawtext&quot;:[&#123;&quot;text&quot;:&quot;§e※TPA功能菜单※\n§c▼&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;▼§r\n  §r同意请求§r\n  §r拒绝请求§r\n   §r你-&gt;他§r\n   §a他-&gt;你§r\n&quot;&#125;]&#125;</span><br><span class="line"></span><br><span class="line">        # 重置</span><br><span class="line">        # execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;121&#125;] ~ ~ ~ scoreboard players set @s SnowballMenu 101</span><br><span class="line">        # execute @a[scores&#x3D;&#123;SnowballMenu&#x3D;126&#125;] ~ ~ ~ scoreboard players set @s SnowballMenu 122</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#&gt;玩家互传 17000</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Minecraft/" rel="tag"># Minecraft</a>
+          
+            <a href="/tags/%E5%91%BD%E4%BB%A4%E6%96%B9%E5%9D%97/" rel="tag"># 命令方块</a>
+          
+            <a href="/tags/Function/" rel="tag"># Function</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/06/03/%E9%AB%98%E4%B8%AD%EF%BC%8C%E7%BB%93%E6%9D%9F%E4%BA%86%EF%BC%81/" rel="next" title="高中，结束了！">
+                <i class="fa fa-chevron-left"></i> 高中，结束了！
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/12/07/music_to_function/" rel="prev" title="我的世界音乐转mcfunction文件">
+                我的世界音乐转mcfunction文件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">helloxing</p>
+              <p class="site-description motion-element" itemprop="description">To be a "Cirno" and study forever!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7Carchive">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PID-mcfunction"><span class="nav-number">2.</span> <span class="nav-text">PID.mcfunction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TPA-main-mcfunction"><span class="nav-number">3.</span> <span class="nav-text">TPA.main.mcfunction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TPA-timer-20-mcfunction"><span class="nav-number">4.</span> <span class="nav-text">TPA.timer(20).mcfunction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SnowballMenu3-0-5-mcfunction"><span class="nav-number">5.</span> <span class="nav-text">SnowballMenu3.0(5).mcfunction</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">helloxing</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

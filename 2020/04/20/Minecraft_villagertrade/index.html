@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Minecraft," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="使用本教程你需要对文件目录有一定的了解！我这里以WIN10版Minecraft为例。 你可以使用下面的任意一个编辑器：  电脑：下载universalminecrafteditor手机：下载blocktopograph(Btr)  在开始之前建议你使用区块显示材质包，尽量将你要修改的一群村村民放在一个区块里，这样比较方便由于我没有找到官方下载”红石能量显示和区块显示材质包”的链接(在某易有对应的资">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Minecraft(基岩版)修改村民交易教程">
+<meta property="og:url" content="http://yoursite.com/2020/04/20/Minecraft_villagertrade/index.html">
+<meta property="og:site_name" content="Table: Everything">
+<meta property="og:description" content="使用本教程你需要对文件目录有一定的了解！我这里以WIN10版Minecraft为例。 你可以使用下面的任意一个编辑器：  电脑：下载universalminecrafteditor手机：下载blocktopograph(Btr)  在开始之前建议你使用区块显示材质包，尽量将你要修改的一群村村民放在一个区块里，这样比较方便由于我没有找到官方下载”红石能量显示和区块显示材质包”的链接(在某易有对应的资">
+<meta property="og:image" content="http://yoursite.com/2020/04/20/Minecraft_villagertrade/start.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/20/Minecraft_villagertrade/entity.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/20/Minecraft_villagertrade/pyjy.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/20/Minecraft_villagertrade/start.m.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/04/20/Minecraft_villagertrade/pyjy.m.png">
+<meta property="article:published_time" content="2020-04-20T13:27:51.000Z">
+<meta property="article:modified_time" content="2021-06-04T06:15:14.729Z">
+<meta property="article:author" content="helloxing">
+<meta property="article:tag" content="Minecraft">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/20/Minecraft_villagertrade/start.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":8,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/04/20/Minecraft_villagertrade/"/>
+
+
+
+
+
+  <title>Minecraft(基岩版)修改村民交易教程 | Table: Everything</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Table: Everything</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-@mthdm">
+          <a href="https://mthdm.cc/" target="_blank" rel="section noopener">
+            
+              <i class="menu-item-icon fa fa-fw fa-rss"></i> <br />
+            
+            @mthdm
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/20/Minecraft_villagertrade/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="helloxing">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Table: Everything">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Minecraft(基岩版)修改村民交易教程</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-20T21:27:51+08:00">
+                2020-04-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E7%A8%8B%E7%B1%BB/" itemprop="url" rel="index">
+                    <span itemprop="name">教程类</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><font color="red">使用本教程你需要对文件目录有一定的了解！我这里以WIN10版Minecraft为例。</font></p>
+<p>你可以使用下面的任意一个编辑器：</p>
+<blockquote>
+<p>电脑：<a href="https://www.universalminecrafteditor.com/" target="_blank" rel="noopener">下载universalminecrafteditor</a><br>手机：<a href="https://github.com/oO0oO0oO0o0o00/blocktopograph/releases" target="_blank" rel="noopener">下载blocktopograph(Btr)</a></p>
+</blockquote>
+<p>在开始之前建议你使用区块显示材质包，尽量将你要修改的一群村村民放在一个区块里，这样比较方便<br>由于我没有找到官方下载”红石能量显示和区块显示材质包”的链接<font color="red">(在某易有对应的资源)</font>，所以这里给百度网盘链接，<font color="red">如有侵权请联系我删除。</font><br><a href="https://pan.baidu.com/s/1MJ9ChLcQSjcujRpz7wsxFg" target="_blank" rel="noopener">百度网盘链接</a>提取码：xjr8</p>
+<p>在你想要的的地方放村民，点开村民交易界面(重要)，并记住你当前的X坐标和Z坐标。</p>
+<h1 id="如果你用universalminecrafteditor："><a href="#如果你用universalminecrafteditor：" class="headerlink" title="如果你用universalminecrafteditor："></a>如果你用universalminecrafteditor：</h1><p>1.打开，选择Windows 10，选择你刚才的存档，点击左边的Chunk Locator，在新出来的小窗口下面输入刚才保存的坐标并点击Locate，之后选择村民所在的区块，点击Open。(鼠标滚轮可以放大/缩小)<br><img src="/2020/04/20/Minecraft_villagertrade/start.png"><br>2.打开Entities，你会看到有一个或多个这样的东西，如图：<br><img src="/2020/04/20/Minecraft_villagertrade/entity.png"><br>这个就是实体的数据，这个的顺序是有先后的，如果你先放出一个村民，在扔出一个物品，在放出另一个村民，则它的顺序是”先放出的村民，扔出去的物品，后放出去的村民”。<br>你想改哪个村民的交易就把哪个点开，之后依次打开”Offers/Recipes/“之后你会发现这里面又有9个这玩意，随便点开一个后将里面的东西全部展开后你会看到下面这些：<br><img src="/2020/04/20/Minecraft_villagertrade/pyjy.png"></p>
+<h1 id="如果你用blocktopograph-Btr-："><a href="#如果你用blocktopograph-Btr-：" class="headerlink" title="如果你用blocktopograph(Btr)："></a>如果你用blocktopograph(Btr)：</h1><p>打开对应存档，找到村民所在的区块，长按，然后选择”实体库 NBT”<br>之后你会看到这些东西：<br>这个的顺序是有先后的，如果你先放出一个村民，在扔出一个物品，在放出另一个村民，则它的顺序是”先放出的村民，扔出去的物品，后放出去的村民”。<br><img src="/2020/04/20/Minecraft_villagertrade/start.m.jpg"><br>点开你要修改的村民的对应的目录，然后依次点击”Offers(红色的)/Recipes(橙色的)/“然后里面有9个红色的玩意，那就是对应的交易。随便点开一个，并将里面的展开，你会发现这么多东西。<br><img src="/2020/04/20/Minecraft_villagertrade/pyjy.m.png"></p>
+<h1 id="交易目录介绍："><a href="#交易目录介绍：" class="headerlink" title="交易目录介绍："></a>交易目录介绍：</h1><p>/</p>
+<blockquote>
+<p>buyA:</p>
+<blockquote>
+<p>Count: <font color="blue">#对应村民的收购的物品的堆叠数量</font><br>Damage: <font color="blue">#该物品数据值，默认为32767</font><br>Name: <font color="blue">#对应Minecraft的物品，例如钻石块:minecraft:diamond_block(注意：前缀”minecraft:”不可省略)</font></p>
+</blockquote>
+<p>sell:</p>
+<blockquote>
+<p>Count: <font color="blue">#对应村民的出售的物品的堆叠数量</font><br>Damage: <font color="blue">#该物品数据值，默认为0</font><br>Name: <font color="blue">#对应Minecraft的物品，例如钻石块:minecraft:diamond_block(注意：前缀”minecraft:”不可省略)</font></p>
+</blockquote>
+<p>rawardExp: <font color="blue">#玩家是否在完成一个交易后获得经验值，默认为1</font><br>buyCountA: <font color="blue">#对应村民的收购第一个物品的价格(无特殊需要请和buyA中的物品堆叠数保持一致)</font><br>buyCountB: <font color="blue">#对应村民的收购第二个物品的价格(无特殊需要请和buyB中的物品堆叠数保持一致，如果某有buyB则写0)</font><br>damand: <font color="blue">#根据需求确定的第一个收购物品的价格调节，默认为0</font><br>maxUses: <font color="blue">#交易最大次数</font><br>tier: <font color="blue">#对应的等级，只有村民达到相应等级才能解锁某些交易(0-新手, 1-学徒, 2-熟手, 3-专家, 4-大师)</font><br>traderExp: <font color="blue">#玩家交易后村民获得的经验值</font><br>uses: <font color="blue">#当前已经交易过的次数(如果超过maxUses则为”缺货”，需要村民到对应的工作站”补货”)</font><br>priceMultiplierA: <font color="blue">#应该是补货后”热销产品”的涨价比率，默认为0.05</font><br>priceMultiplierB: <font color="blue">#应该是补货后”热销产品”的涨价比率，默认为0</font></p>
+</blockquote>
+<h1 id="关于buyB："><a href="#关于buyB：" class="headerlink" title="关于buyB："></a>关于buyB：</h1><p>/</p>
+<blockquote>
+<p>buyB: <font color="blue">#可选添加，这个是村民需要两种物品交易一种物品时用的，例如图书管理员的附魔书交易</font>  <!-- <font color="blue">#</font> --></p>
+<blockquote>
+<p>Count:3 <font color="blue">#对应村民的收购的物品的堆叠数量</font><br>Damage: <font color="blue">#该物品数据值，默认为32767</font><br>Name: <font color="blue">#对应Minecraft的物品，例如钻石块:minecraft:diamond_block(注意：前缀”minecraft:”不可省略)</font></p>
+</blockquote>
+</blockquote>
+<h1 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h1><p>例：在专家阶段才能解锁的一个需要9个铁锭换3个钻石块的交易，但是玩家交易的次数最大为32767，且之前有人和他交易了99次，不能从交易中获得经验，但是村民在交易后能获得59点经验。<br>/</p>
+<blockquote>
+<p>buyA:</p>
+<blockquote>
+<p>Count: 9<br>Damage: 32767<br>Name: minecraft:iron_ingot</p>
+</blockquote>
+<p>sell:</p>
+<blockquote>
+<p>Count: 3<br>Damage: 0<br>Name: minecraft:diamond_block</p>
+</blockquote>
+<p>rawardExp: 0<br>buyCountA: 9<br>buyCountB: 0<br>damand: 0<br>maxUses: 32767<br>tier: 1<br>traderExp: 59<br>uses: 99<br>priceMultiplierA: 0.05<br>priceMultiplierB: 0</p>
+</blockquote>
+<h1 id="特殊说明："><a href="#特殊说明：" class="headerlink" title="特殊说明："></a>特殊说明：</h1><p>buyCountA,maxusers等数据的最大值为32767;物品堆叠数最大为127.<br>如果买卖特殊物品例如有附魔的工具武器之类的请参考另一篇文章：<a href="http://helloxing.top/2020/4/30/Minecraft-ench" target="_self">Minecraft(基岩版)自定义附魔教程</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Minecraft/" rel="tag"># Minecraft</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/04/20/Novel_%E4%B8%8D%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C/" rel="next" title="不平凡的世界">
+                <i class="fa fa-chevron-left"></i> 不平凡的世界
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/04/20/%E5%8D%8E%E5%A4%8F%E4%B9%8B%E5%9F%9F%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" rel="prev" title="Minecraft华夏之域服务器更新日志">
+                Minecraft华夏之域服务器更新日志 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">helloxing</p>
+              <p class="site-description motion-element" itemprop="description">To be a "Cirno" and study forever!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7Carchive">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如果你用universalminecrafteditor："><span class="nav-number">1.</span> <span class="nav-text">如果你用universalminecrafteditor：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如果你用blocktopograph-Btr-："><span class="nav-number">2.</span> <span class="nav-text">如果你用blocktopograph(Btr)：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#交易目录介绍："><span class="nav-number">3.</span> <span class="nav-text">交易目录介绍：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于buyB："><span class="nav-number">4.</span> <span class="nav-text">关于buyB：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#举例："><span class="nav-number">5.</span> <span class="nav-text">举例：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#特殊说明："><span class="nav-number">6.</span> <span class="nav-text">特殊说明：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">helloxing</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
