@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="EXCEL,电子表格," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="函数在数学上f(x)&#x3D;3x+2就叫做一个函数，f是函数名，3x+2就是函数的运算方法，x为参数在execl或者编程上也是一样的, 数学运算函数123456- SIN(number)- COS(number)- LN(number)- SQRT(number)- PI()等...  具体有什么函数可以点击编辑栏左侧的fx查看，里面给出了函数的返回值和参数 数据处理的函数，如- IF(logical_">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EXCEL简单笔记">
+<meta property="og:url" content="http://yoursite.com/2022/11/23/EXCEL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Table: Everything">
+<meta property="og:description" content="函数在数学上f(x)&#x3D;3x+2就叫做一个函数，f是函数名，3x+2就是函数的运算方法，x为参数在execl或者编程上也是一样的, 数学运算函数123456- SIN(number)- COS(number)- LN(number)- SQRT(number)- PI()等...  具体有什么函数可以点击编辑栏左侧的fx查看，里面给出了函数的返回值和参数 数据处理的函数，如- IF(logical_">
+<meta property="og:image" content="http://yoursite.com/2022/11/23/EXCEL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0/eg01.png">
+<meta property="article:published_time" content="2022-11-23T10:53:29.000Z">
+<meta property="article:modified_time" content="2022-11-23T13:16:52.914Z">
+<meta property="article:author" content="helloxing">
+<meta property="article:tag" content="EXCEL">
+<meta property="article:tag" content="电子表格">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2022/11/23/EXCEL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0/eg01.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":8,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2022/11/23/EXCEL简单笔记/"/>
+
+
+
+
+
+  <title>EXCEL简单笔记 | Table: Everything</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Table: Everything</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-@mthdm">
+          <a href="https://mthdm.cc/" target="_blank" rel="section noopener">
+            
+              <i class="menu-item-icon fa fa-fw fa-rss"></i> <br />
+            
+            @mthdm
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/11/23/EXCEL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="helloxing">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Table: Everything">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">EXCEL简单笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-11-23T18:53:29+08:00">
+                2022-11-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E5%AD%A6%E7%B1%BB/" itemprop="url" rel="index">
+                    <span itemprop="name">教学类</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>在数学上f(x)=3x+2就叫做一个函数，f是函数名，3x+2就是函数的运算方法，x为参数<br>在execl或者编程上也是一样的,</p>
+<h2 id="数学运算函数"><a href="#数学运算函数" class="headerlink" title="数学运算函数"></a>数学运算函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- SIN(number)</span><br><span class="line">- COS(number)</span><br><span class="line">- LN(number)</span><br><span class="line">- SQRT(number)</span><br><span class="line">- PI()</span><br><span class="line">等...</span><br></pre></td></tr></table></figure>
+
+<p>具体有什么函数可以点击编辑栏左侧的fx查看，里面给出了函数的返回值和参数</p>
+<h2 id="数据处理的函数，如"><a href="#数据处理的函数，如" class="headerlink" title="数据处理的函数，如"></a>数据处理的函数，如</h2><pre><code>- IF(logical_test, value_if_true, value_if_false)
+- VLOOKUP(lookup_value, table_arrary, col_index_num, range_lookup)
+等（注：参数之间用英文逗号分开）（后面再介绍这些函数）</code></pre><h1 id="单元格引用"><a href="#单元格引用" class="headerlink" title="单元格引用"></a>单元格引用</h1><h2 id="引用数据"><a href="#引用数据" class="headerlink" title="引用数据"></a>引用数据</h2><h3 id="引用行-列-不推荐"><a href="#引用行-列-不推荐" class="headerlink" title="引用行/列(不推荐)"></a>引用行/列(不推荐)</h3><p>使用<font color="red">单个大写字母</font>:<font color="red">单个大写字母</font>来引用某一列或多列，<br>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- B:B</span><br><span class="line">- A:D</span><br></pre></td></tr></table></figure>
+
+<p>使用<font color="red">单个数字</font>:<font color="red">单个数字</font>来引用某一行/多行<br>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 2:2</span><br><span class="line">- 3:7</span><br></pre></td></tr></table></figure>
+<h3 id="引用矩阵内的数组"><a href="#引用矩阵内的数组" class="headerlink" title="引用矩阵内的数组"></a>引用矩阵内的数组</h3><p>使用<font color="red">单元格位置(起始位置)</font>:<font color="red">单元格位置(终止位置)</font>来划出一个矩阵的数组<br>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- A2:C6</span><br><span class="line">- F3:B1</span><br></pre></td></tr></table></figure>
+
+<h2 id="引用位置"><a href="#引用位置" class="headerlink" title="引用位置"></a>引用位置</h2><h3 id="相对引用"><a href="#相对引用" class="headerlink" title="相对引用"></a>相对引用</h3><p>对于公式中的单元格引用无论是<font color="red">使用下拉复制还是CTRL+C/V复制</font>的公式中的单元格引用都是该单元格的相对位置<br>例如：<br><font color="red">C2</font>的内容为<font color="red">=A2+C3</font>，<font color="red">A2</font>在<font color="red">C2</font>的左边第二个，<font color="red">C3</font>在<font color="red">C2</font>下面第一个，那么将<font color="red">C2</font>复制到<font color="red">D6</font>时这个单元格内公式就变成了<font color="red">=B6+D7</font>，<font color="red">B6</font>在<font color="red">D6</font>的左边第二个， <font color="red">D7</font>在<font color="red">D6</font>下面第一个</p>
+<p>而剪切(CTRL+X/V)这些单元格不会改变这些单元格的公式的引用位置，<br>例如：<br><font color="red">C2</font>的内容为<font color="red">=D2*C3</font>，移动(剪切+粘贴)<font color="red">C2</font>单元格到<font color="red">F3</font>，<font color="red">F3</font>的内容还是<font color="red">=D2*C3</font></p>
+<p>如果某一单元格引用了另一些单元格的数据，但是另一些单元格数据被<font color="red">移动(CTRL+X/V)</font>了，那么某一单元格的内容也会相应做出变化，但是结果不变(因为被引用的数据没有变化)<br>例如：<br><font color="red">C2</font>的内容为<font color="red">=C3^C4</font>，<font color="red">C3</font>被移动到了<font color="red">F3</font>，<font color="red">C4</font>被移动到了<font color="red">A4</font>，那么<font color="red">C2</font>的内容就变成了<font color="red">=F3^A4</font></p>
+<h3 id="绝对引用"><a href="#绝对引用" class="headerlink" title="绝对引用"></a>绝对引用</h3><p>与相对引用类似，绝对引用可以理解为<font color="red">被$标记的行/列标签不会改变，无论引用了该单元格的单元格被复制还是被移动</font><br>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- $A$3</span><br><span class="line">- $C6</span><br><span class="line">- D$2</span><br></pre></td></tr></table></figure>
+
+<p>B3的内容为=$A$1 + $C<font color="red">1</font> + <font color="red">D</font>$5 + <font color="red">E2</font><br>如果B3被复制到B4，那么B4的内容会变为=$A$1 + $C<font color="red">2</font> + <font color="red">E</font>$5 + <font color="red">F3</font><br>（只有被$修饰的行/列标签不会改变）</p>
+<h1 id="函数-1"><a href="#函数-1" class="headerlink" title="函数"></a>函数</h1><p>在数学上我们知道f(x)=3*x + 2中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f: 函数名</span><br><span class="line">x: 参数</span><br><span class="line">3*x + 2: 函数式</span><br></pre></td></tr></table></figure>
+
+<p>对应的，在EXCEL中也是类似，在编程中也是类似<br>在EXCEL中函数都会有返回值，例如SIN(number)的返回值是number的正弦值</p>
+<p>具体有什么函数可以点击编辑栏左侧的<font color="red">fx</font>查看，里面给出了函数的返回值和参数。(选择函数后单击确定后会让你选择函数的组合方式以及填入参数等步骤，也包括对于某函数的参数的介绍)<br><font color="red">EXCEL中的函数那里都有介绍，如果还是看不懂可以尝试在网络上查找该函数的介绍</font></p>
+<p>注意：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 在EXCEL中函数的参数被[]标记的为可选参数</span><br><span class="line">- 有些函数是没有参数的，例如PI()，他的返回值为π的近似结果</span><br><span class="line">- 如果不需要某一参数,可以直接什么也不写(如果后面有参数要填写则写逗号后在填</span><br></pre></td></tr></table></figure>
+
+<h1 id="数据处理常用函数"><a href="#数据处理常用函数" class="headerlink" title="数据处理常用函数"></a>数据处理常用函数</h1><h2 id="01-index-match-组合"><a href="#01-index-match-组合" class="headerlink" title="01.index() + match()组合"></a>01.index() + match()组合</h2><p>（功能上此函数和xlookup非常相似，但vlookup和xlookup由于功能不足和版本原因不讲）<br>此函数组合可以理解为查找表中的一项并返回该项所对应的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">index(array, row_num, [column_num&#x3D;1]):</span><br><span class="line">返回array数组的第row_num行第column_num列</span><br><span class="line"></span><br><span class="line">array       :单元格区域或数组常量</span><br><span class="line">row_num     :指定返回array区域的第几行</span><br><span class="line">column_num  :指定返回array区域的第几列</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">match(lookup_value, lookup_array, [match_type&#x3D;0]):</span><br><span class="line">返回lookup_value在lookup_array区域的第几个(一般用于单行&#x2F;单列)</span><br><span class="line"></span><br><span class="line">lookup_value:被查找的值</span><br><span class="line">lookup_array:在哪里查找</span><br><span class="line">match_type  :匹配模式 1:小于, 0:精确匹配, -1:大于</span><br></pre></td></tr></table></figure>
+<p><font color="green"># match函数默认为数字类型的查找，如果要让文本也能适用，则需要填入match_type参数(如果只给两个参数而第二个参数后面没有逗号，表示没有第三个参数)</font><br>组合使用这两个函数可达到<font color="red">xlookup()</font>的效果<br>例如下表数据</p>
+<!--
+|#|姓名     |学号           |语文|数学|
+|-|---------|--------------|----|----|
+|1|刘华强   |202111451401   |61 |48  |
+|2|布耶尔   |202111451402   |100|100 |
+|3|橙茉莉   |202111451403   |73 |94  |
+|4|||||
+|5|布耶尔||||
+-->
+<img src="/2022/11/23/EXCEL%E7%AE%80%E5%8D%95%E7%AC%94%E8%AE%B0/eg01.png">
+
+<p>如果我在C6中填入<font color="red">=INDEX(D1:D4, MATCH(B6, B1:B4, 0))</font>那么C6的返回值为100,及布耶尔的语文成绩<br>原理:<br><font color="red">MATCH(B6, B1:B4, 0)</font>表示在<font color="red">B1:B4</font>(姓名列)精确查找匹配<font color="red">B6</font>(“布耶尔”)在第几个,返回值为<font color="red">3</font>,所以原公式变为<br><font color="red">=INDEX(D1:D4, 3)</font>，表示返回<font color="red">D1:D4</font>(语文列)中第<font color="red">3</font>行的值,为<font color="red">100</font>(“布耶尔”的语文成绩)</p>
+<h2 id="02-average"><a href="#02-average" class="headerlink" title="02.average()"></a>02.average()</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">average(number1, [number2], ...):</span><br><span class="line">求所有参数的平均值</span><br><span class="line"></span><br><span class="line">number1 :参与计算的数值</span><br><span class="line">number2 :参与计算的数值</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>这个参数可以引用单元格的数据，例如求上述表格的所有学生的数学成绩的平均值，那么就可以写<font color="red">=AVERAGE(E2:E4)</font>，返回值为80.7(近似值)</p>
+<h2 id="03-sum"><a href="#03-sum" class="headerlink" title="03.sum()"></a>03.sum()</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sum(number1, [number2], ...):</span><br><span class="line">返回所有参数的和</span><br><span class="line"></span><br><span class="line">number1 :参与计算的数值</span><br><span class="line">number2 :参与计算的数值</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>同02.average()，例如要求学生布耶尔的总成绩，可以使用<font color="red">=SUM(D3:E3)</font>，尽管<font color="red">=D3+E3</font>也可以达到相同的效果，但如果数据是成行/列的建议使用SUM()函数求和</p>
+<h2 id="04-others…"><a href="#04-others…" class="headerlink" title="04.others…"></a>04.others…</h2><p><a href="https://www.bilibili.com/video/BV1TY411L7ZD?p=8" target="_blank" rel="noopener">都看到这里了，要不要来首BGM放松一下？</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/EXCEL/" rel="tag"># EXCEL</a>
+          
+            <a href="/tags/%E7%94%B5%E5%AD%90%E8%A1%A8%E6%A0%BC/" rel="tag"># 电子表格</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/12/07/music_to_function/" rel="next" title="我的世界音乐转mcfunction文件">
+                <i class="fa fa-chevron-left"></i> 我的世界音乐转mcfunction文件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">helloxing</p>
+              <p class="site-description motion-element" itemprop="description">To be a "Cirno" and study forever!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7Carchive">
+              
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">1.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数学运算函数"><span class="nav-number">1.1.</span> <span class="nav-text">数学运算函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据处理的函数，如"><span class="nav-number">1.2.</span> <span class="nav-text">数据处理的函数，如</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#单元格引用"><span class="nav-number">2.</span> <span class="nav-text">单元格引用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引用数据"><span class="nav-number">2.1.</span> <span class="nav-text">引用数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引用行-列-不推荐"><span class="nav-number">2.1.1.</span> <span class="nav-text">引用行&#x2F;列(不推荐)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用矩阵内的数组"><span class="nav-number">2.1.2.</span> <span class="nav-text">引用矩阵内的数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用位置"><span class="nav-number">2.2.</span> <span class="nav-text">引用位置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#相对引用"><span class="nav-number">2.2.1.</span> <span class="nav-text">相对引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绝对引用"><span class="nav-number">2.2.2.</span> <span class="nav-text">绝对引用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数-1"><span class="nav-number">3.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据处理常用函数"><span class="nav-number">4.</span> <span class="nav-text">数据处理常用函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#01-index-match-组合"><span class="nav-number">4.1.</span> <span class="nav-text">01.index() + match()组合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#02-average"><span class="nav-number">4.2.</span> <span class="nav-text">02.average()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#03-sum"><span class="nav-number">4.3.</span> <span class="nav-text">03.sum()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#04-others…"><span class="nav-number">4.4.</span> <span class="nav-text">04.others…</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">helloxing</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
